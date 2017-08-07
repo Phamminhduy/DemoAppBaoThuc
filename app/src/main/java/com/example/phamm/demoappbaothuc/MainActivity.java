@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
         pending=PendingIntent.getBroadcast(MainActivity.this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
         alarmManager.set(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),pending);
         txtHienThi.setText("Bạn Đã Đặt Giờ Là: "+string_gio+" : "+string_phut);
-
     }
     public void onStop(View view){
         AnhXa();

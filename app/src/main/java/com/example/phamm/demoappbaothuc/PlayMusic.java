@@ -40,10 +40,14 @@ public class PlayMusic extends Service {
         }
         if(id==1){
             mediaPlayer.stop();
-            mediaPlayer.reset();
         }
-
-
         return START_STICKY;
+    }
+
+    @Override
+    public void onDestroy() {
+        mediaPlayer.release();
+        super.onDestroy();
+
     }
 }
